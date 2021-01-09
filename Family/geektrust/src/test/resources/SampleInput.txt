@@ -1,0 +1,13 @@
+ADD_CHILD Satya Ketu Male
+GET_RELATIONSHIP Kriya Paternal-Uncle
+GET_RELATIONSHIP Satvy Brother-In-Law
+GET_RELATIONSHIP Laki Siblings
+GET_RELATIONSHIP Vritha Maternal-Uncle
+GET_RELATIONSHIP Atya Sister-In-Law
+GET_RELATIONSHIP Vasa Siblings
+ADD_CHILD Pjali Srutak Male
+GET_RELATIONSHIP Pjali Son
+ADD_CHILD Asva Vani Female
+GET_RELATIONSHIP Vasa Siblings
+ADD_CHILD Satya Yaya Female
+GET_RELATIONSHIP Satvy Sister-In-Law

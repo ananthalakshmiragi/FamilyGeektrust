@@ -1,17 +1,18 @@
 package in.geektrust.service;
 
-import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-public class TestBuildTree {
-	
-	private FamilyTree familyTree = new FamilyTree();
+import in.geektrust.model.FamilyTree;
+
+class TestBuildTree {
 	
 	@Test
-	public void testIfTreeIsBuilt() {
+	void testIfTreeIsBuilt() {
 		
-		BuildTree buildTree =  new BuildTreeImpl();
-		assertNotNull(buildTree.buildTheFamilyTree(familyTree));
+		FamilyTree family = new FamilyTree();
+		InitializeTree buildTree =  new InitializeTreeImpl(family);
+		assertNotNull(buildTree.initializeTheFamilyTree(),"Initializing tree should return a FamilyTree which is not null");
 	}
 }

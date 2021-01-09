@@ -2,37 +2,45 @@ package in.geektrust.helper;
 
 public class FamilyConstants {
 	
-	public static enum Gender {
+	public enum Gender {
 		FEMALE,
 		MALE
 	}
 	
-	public static enum Result {
+	public enum Result {
 		CHILD_ADDITION_SUCCEEDED,
 		PERSON_NOT_FOUND,
 		CHILD_ADDITION_FAILED,
 		NONE
 	}
 	
-	public static enum BuildTreeInst {
+	public enum BuildTreeInst {
 		ADD_CHILD,
 		ADD_SPOUSE
 	}
 	
-	public static enum InputType {
+	public enum InputType {
 		ADD_CHILD,
 		GET_RELATIONSHIP
 	}
 	
-	public static String PATERNAL_UNCLE = "Paternal-Uncle";
-	public static String MATERNAL_UNCLE = "Maternal-Uncle";
-	public static String PATERNAL_AUNT = "Paternal-Aunt";
-	public static String MATERNAL_AUNT = "Maternal-Aunt";
-	public static String SISTER_IN_LAW = "Sister-In-Law";
-	public static String BROTHER_IN_LAW = "Brother-In-Law";
-	public static String SON = "Son";
-	public static String DAUGHTER = "Daughter";
-	public static String SIBLINGS = "Siblings";
+	public static final String PATERNAL_UNCLE = "Paternal-Uncle";
+	public static final String MATERNAL_UNCLE = "Maternal-Uncle";
+	public static final String PATERNAL_AUNT = "Paternal-Aunt";
+	public static final String MATERNAL_AUNT = "Maternal-Aunt";
+	public static final String SISTER_IN_LAW = "Sister-In-Law";
+	public static final String BROTHER_IN_LAW = "Brother-In-Law";
+	public static final String SON = "Son";
+	public static final String DAUGHTER = "Daughter";
+	public static final String SIBLINGS = "Siblings";
+	
+	public static final String MALE = "Male";
+	public static final String FEMALE = "Female";
+	
+	public static final String QUEEN = "Queen Anga";
+	public static final String CHITRA = "Chitra";
+	
+	public static final String SPACE = " ";
 	
 	public enum Relationships {
 
@@ -65,5 +73,4 @@ public class FamilyConstants {
 	        return null;
 	    }
 	}
-	
 }

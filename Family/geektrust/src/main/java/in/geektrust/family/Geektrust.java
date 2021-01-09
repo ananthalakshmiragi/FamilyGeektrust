@@ -1,11 +1,12 @@
 package in.geektrust.family;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.Scanner;
 
-import in.geektrust.service.BuildTree;
-import in.geektrust.service.BuildTreeImpl;
-import in.geektrust.service.FamilyTree;
+import in.geektrust.model.FamilyTree;
+import in.geektrust.service.InitializeTree;
+import in.geektrust.service.InitializeTreeImpl;
 
 public class Geektrust {
 
@@ -18,26 +19,29 @@ public class Geektrust {
 
 		FamilyTree familyTree = new FamilyTree();
 		
-		BuildTree b = new BuildTreeImpl();
-		b.setFamilyTree(familyTree);
-		familyTree = b.buildTheFamilyTree(familyTree);
-//		String inpFilePath = "E:\\Hacktoberfest\\Family\\input3.txt";
-//		familyTree.addOrGetFamily(familyTree, inpFilePath);
+		InitializeTree buildTree = new InitializeTreeImpl(familyTree);
+		familyTree = buildTree.initializeTheFamilyTree();
 		
 		return addOrGetFamily(familyTree, filePath);
 	}
 	
 	public static String addOrGetFamily(FamilyTree familyTree, String inpPath) {
-		String res =null;
+		String res = null;
+		Scanner sc = null;
 		try {
 			File inpFile = new File(inpPath);
-			Scanner sc = new Scanner(inpFile);
+			sc = new Scanner(inpFile);
 			while (sc.hasNextLine()) {
 				res = familyTree.addOrGetFamilyElement(familyTree, sc.nextLine());
 			}
-		} catch (Exception e) {
-			e.printStackTrace();
+		} catch (IOException ioe) {
+			ioe.printStackTrace();
+		} finally {
+			if (sc != null) {
+				sc.close();
+			}
 		}
+
 		return res;
 	}
 }
